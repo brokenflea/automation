@@ -24,20 +24,27 @@ Speaker            8253       8253       8253       8253        8253        8253
 Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
 192.168.1.1    0  65534  302905  302928     8253    0    0     2w0d          1
 """
-#print(output)
+#print(output.splitlines())
 dict1 = output.splitlines()
 dict2 = {}
-dict2 = dict1[19].splitlines()
-bgp_peer_Table = {}
-#for line in output.splitlines():
-#    if any(x in line for x in bgp_peer_list):
-#        print(line)
+dict2 = dict1[20]
+dict3 = dict2.split()
+print(dict3)
+#print(dict1[20])
+#for words in dict2.split():
+#    print(words)
 
+#words = dict2.split()
 
-for key in bgp_peer_list:
-    #print(key)
-    for search in dict2:
-        bgp_peer_Table.update(key, search[8])
-        if key in search:
-            print(f"{key} is in this list")
-print(bgp_peer_Table)
+#print(dict2)
+#bgp_peer_Table = {'peer', 'state'}
+#   print(line)
+#
+#
+#for key in bgp_peer_list:
+#    #print(key)
+#    for search in dict2:
+#        bgp_peer_Table.update(key, search[8])
+#        if key in search:
+#            print(f"{key} is in this list")
+#print(bgp_peer_Table)
